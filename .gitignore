@@ -1,0 +1,12 @@
+.project
+.classpath
+.DS_Store
+.settings
+*.properties
+/build/
+/src/main/webapp/
+/target
+/bin/
+/.apt_generated/
+*~
+/m2repo/*
