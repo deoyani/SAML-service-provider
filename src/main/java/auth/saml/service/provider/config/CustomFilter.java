@@ -38,8 +38,8 @@ public class CustomFilter implements Filter {
 		HttpServletResponse response = (HttpServletResponse) servletResponse;
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
 
-		System.out.println("redirectURL:" + request.getContextPath() + "\n :::" + request.getRequestURI() + " \n :::"
-				+ request.getRequestURL());
+//		System.out.println("redirectURL:" + request.getContextPath() + "\n :::" + request.getRequestURI() + " \n :::"
+//				+ request.getRequestURL());
 		try {
 			
 			String redirectURL = request.getParameterValues("redirectTo")[0];
@@ -48,6 +48,7 @@ public class CustomFilter implements Filter {
 				try {
 
 					for (String urlString : urls) {
+						System.out.println("redirecto:"+urlString);
 						URL url = new URL(redirectURL);
 						URL nUrl = new URL(urlString);
 
